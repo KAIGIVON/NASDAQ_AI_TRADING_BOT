@@ -1,0 +1,798 @@
+# megabot.py — חלק א: Flask + שליחת פקודות
+import threading
+import time
+import logging
+import sys
+import re
+import requests
+import json
+import psutil
+import subprocess
+from datetime import datetime, time as dt_time, timedelta
+from flask import Flask, request, jsonify
+from pywinauto.application import Application
+from pywinauto import Desktop
+import pytz
+
+# === הגדרות קבועות ===
+API_KEY = *****
+SHUTDOWN_KEY = *****
+TRADING_HOURS = *****
+MAX_POSITION_SIZE = *****
+MAX_DAILY_TRADES = *****
+LOCALHOST_URL = *****
+israel_tz = *****
+app = *****
+pywinauto_lock = *****
+
+# === לוגים למסך + קובץ ===
+logging.basicConfig(
+    level= *****
+    format= *****
+    handlers= *****
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler("*****", mode='a', encoding='utf-8')
+    ]
+)
+
+logging.info("*****")
+
+# === משתנים כלליים ===
+failed_auth_attempts = *****
+AUTH_ATTEMPT_LIMIT = *****
+AUTH_ATTEMPT_WINDOW = *****
+trade_counter = *****
+last_trade_day = *****
+manual_news_block = *****
+manual_news_lock = *****
+trading_blocked_by_news_ocr = *****
+last_command_type = *****
+last_command_lock = *****
+MAX_DAILY_LOSS = *****
+THRESHOLD_CHANGE = *****
+CHECK_INTERVAL_PNL = *****
+CHECK_INTERVAL = *****
+daily_blocked = *****
+daily_pnl_total = *****
+last_seen_pnl = *****
+last_logged_pnl = *****
+close_sent_daily = *****
+MAX_SINGLE_LOSS = *****
+CHECK_INTERVAL_SINGLE = *****
+THRESHOLD_LOG_CHANGE = *****
+CPU_THRESHOLD = *****
+RAM_THRESHOLD = *****
+CHECK_INTERVAL_MONITOR = *****
+ALERT_COOLDOWN = *****
+FETCH_INTERVAL_MINUTES = *****
+ACCOUNT_DATA_WINDOW_TITLE = *****
+
+PROCESSES_TO_MONITOR = *****
+FLASK_HEALTH_URL = *****
+NGINX_URL = *****
+
+# === שליחת התראה לדיסקורד ===
+DISCORD_WEBHOOK_URL = *****
+last_alerts = *****
+monitor_last_alerts = *****
+
+
+def send_discord_alert(message: str, tag: str):
+    """ redacted function body for public release """
+    *****
+        *****
+            *****
+            *****
+        *****
+            *****
+            *****
+            
+def schedule_task(task_func, interval_seconds):
+    """ redacted function body for public release """
+        *****
+            *****
+        *****
+            *****
+        *****
+def log_trade_event(reason: str, pnl: float):
+    """ redacted function body for public release """
+    *****
+    *****
+        *****
+            *****
+    *****
+        *****
+
+# === בדיקות API וזמן מסחר ===
+def validate_api_key(json_data: dict) -> bool:
+    """ redacted function body for public release """
+
+def is_trading_blocked():
+    """ redacted function body for public release """
+    *****
+        *****
+    *****
+
+# === שליחת פקודה ל־NinjaTrader ===
+def send_order_to_ninja(command: str, quantity: int = 1):
+    """ redacted function body for public release """
+        *****
+
+        *****
+            *****
+            *****
+
+            *****
+            *****
+            *****
+            *****
+            *****
+
+            *****
+            *****
+                *****
+            *****
+                *****
+            *****
+                *****
+            *****
+                *****
+                *****
+
+            *****
+            *****
+                *****
+                *****
+                *****
+
+            *****
+
+        *****
+            *****
+            *****
+            *****
+
+def is_long_position_open():
+    """ redacted function body for public release """
+        *****
+        *****
+            *****
+            *****
+            *****
+            *****
+
+            *****
+            *****
+
+            *****
+                *****
+                *****
+
+                *****
+
+                *****
+                    *****
+                        *****
+                        *****
+                        *****
+                            *****
+
+            *****
+                *****
+                *****
+            *****
+                *****
+                *****
+
+        *****
+            *****
+            *****
+            *****
+
+def get_long_position_size():
+    """ redacted function body for public release """
+        *****
+        *****
+            *****
+            *****
+            *****
+            *****
+
+            *****
+            *****
+
+            *****
+                *****
+                *****
+
+                *****
+                    *****
+                        *****
+                        *****
+                        *****
+
+            *****
+
+        *****
+            *****
+            *****
+            *****
+*****
+def handle_command():
+    """ redacted function body for public release """
+    *****
+
+    *****
+    *****
+        *****
+        *****
+
+        *****
+        *****
+        *****
+        *****
+            *****
+
+        *****
+
+    *****
+    *****
+
+    *****
+    *****
+        *****
+        *****
+        *****
+
+    *****
+    *****
+    *****
+        *****
+        *****
+        
+    *****
+        *****
+        
+    *****
+        *****
+    *****
+        *****
+
+    *****
+
+    *****
+    *****
+        *****
+        *****
+            *****
+            *****
+
+        *****
+            *****
+            *****
+
+        *****
+            *****
+            *****
+            *****
+
+    *****
+    *****
+        *****
+            *****
+        *****
+            *****
+            *****
+            *****
+
+    *****
+    *****
+    *****
+    *****
+    *****
+    *****
+
+    *****
+        *****
+            *****
+            *****
+
+    *****
+        *****
+        *****
+
+    *****
+    *****
+        *****
+            *****
+                *****
+                *****
+
+            *****
+            *****
+                *****
+                *****
+                *****
+
+            *****
+
+            *****
+                *****
+
+            *****
+            *****
+            *****
+
+    *****
+        *****
+        *****
+        *****
+
+
+*****
+def webhook_alias():
+    """ redacted function body for public release """
+    
+*****
+def set_news_block():
+    """ redacted function body for public release """
+    *****
+    *****
+
+    *****
+        *****
+        *****
+
+        *****
+        *****
+        *****
+
+        *****
+            *****
+
+        *****
+
+    *****
+
+    *****
+        *****
+        *****
+        *****
+
+        *****
+            *****
+            *****
+
+            *****
+                *****
+                    *****
+                    *****
+                    *****
+                *****
+            *****
+            *****
+        *****
+            *****
+                *****
+                    *****
+                    *****
+                    *****
+                *****
+
+            *****
+            *****
+
+        *****
+
+    *****
+        *****
+        *****
+
+*****
+def get_position_status():
+    """ redacted function body for public release """
+    *****
+    *****
+
+
+def extract_pnl_from_basic_entry():
+    """ redacted function body for public release """
+        *****
+    *****
+        *****
+        *****
+        *****
+
+        *****
+            *****
+            *****
+                *****
+                *****
+                *****
+                    *****
+                *****
+    *****
+        *****
+        *****
+    *****
+    
+def safe_send_sell(quantity=1):
+    """ redacted function body for public release """
+        *****
+            *****
+        *****
+            *****
+            *****
+            *****
+
+        *****
+        *****
+            *****
+        *****
+            *****
+        *****
+    *****
+        *****
+        *****
+
+
+    
+def daily_pnl_blocker_loop():
+    """ redacted function body for public release """
+
+    *****
+    *****
+
+    *****
+
+    *****
+        *****
+            *****
+            *****
+
+        *****
+        *****
+
+        *****
+            *****
+                *****
+                *****
+
+            *****
+
+            *****
+                *****
+                *****
+
+            *****
+            *****
+                *****
+                *****
+                *****
+                *****
+                *****
+
+            *****
+            *****
+                *****
+                *****
+                    *****
+                    *****
+                    *****
+                *****
+                    *****
+                *****
+
+        *****
+            *****
+            *****
+                *****
+                *****
+                    *****
+                    *****
+                    *****
+                *****
+                *****
+
+        *****
+        *****
+            *****
+                *****
+                    *****
+                    *****
+                    *****
+                        *****
+                        *****
+                        *****
+                    *****
+                    *****
+
+        *****
+        *****
+
+
+def single_trade_loss_blocker_loop():
+    """ redacted function body for public release """
+
+    *****
+        *****
+        *****
+        *****
+
+        *****
+
+        *****
+        *****
+            *****
+            *****
+                *****
+                *****
+                *****
+            *****
+
+        *****
+        *****
+            *****
+
+            *****
+                *****
+                    *****
+                    *****
+
+                *****
+                    *****
+                    *****
+                        *****
+                        *****
+                        *****
+                    *****
+                        *****
+                    *****
+
+            *****
+                *****
+                *****
+                *****
+
+            *****
+            
+
+
+# === חלק ד: System Monitor & Alerts ===
+
+def monitor_send_alert(message, tag):
+    """ redacted function body for public release """
+    *****
+        *****
+        *****
+
+def check_flask():
+    """ redacted function body for public release """
+        *****
+        *****
+            *****
+    *****
+        *****
+
+def check_nginx():
+    """ redacted function body for public release """
+        *****
+            *****
+            *****
+        *****
+
+        *****
+            *****
+        *****
+            *****
+
+    *****
+        *****
+
+def check_cpu_ram():
+    """ redacted function body for public release """
+    *****
+
+    *****
+        *****
+
+
+    *****
+        *****
+
+
+def check_gui():
+    """ redacted function body for public release """
+        *****
+        *****
+            *****
+            *****
+)
+        if not found:
+            monitor_send_alert("*****", "*****")
+    except Exception:
+        monitor_send_alert("*****", "*****")
+
+def check_process_running(name: str) -> bool:
+    """ redacted function body for public release """
+        *****
+            *****
+                *****
+        *****
+            *****
+    *****
+
+def monitor_loop():
+    """ redacted function body for public release """
+        *****
+        *****
+        *****
+        *****
+        *****
+
+        *****
+        *****
+            *****
+            *****
+                *****
+        *****
+            *****
+
+        *****
+        *****
+            *****
+                *****
+            *****
+                *****
+        *****
+            *****
+
+        *****
+        *****
+
+        *****
+            *****
+                *****
+
+        *****
+
+def check_latency():
+    """ redacted function body for public release """
+        *****
+        *****
+        *****
+    *****
+
+    *****
+    *****
+        *****
+
+        *****
+            *****
+            *****
+            *****
+            
+            *****
+                *****
+            
+            *****
+                *****
+            *****
+                *****
+
+        *****
+            *****
+
+
+# === ניהול קירור התראות (מונע ספאם) ===
+last_alerts = *****
+def ping_host(hostname, tag, max_latency_ms=150):
+    """ redacted function body for public release """
+        *****
+            *****
+            *****
+            *****
+        *****
+
+        *****
+
+        *****
+            *****
+
+        *****
+            *****
+                *****
+                *****
+                *****
+                    *****
+            *****
+                *****
+        *****
+            *****
+
+    *****
+        *****
+        *****
+
+
+# === חלק ה: main() — הרצת כל המודולים בלולאות נפרדות ===
+def start_all_threads():
+    """ redacted function body for public release """
+        *****
+    *****
+        *****
+
+    *****
+        *****
+    *****
+        *****
+
+    *****
+        *****
+    *****
+        *****
+
+    *****
+        *****
+        *****
+    *****
+        *****
+  
+        
+def auto_close_at_time():
+    """ redacted function body for public release """
+    *****
+    *****
+        *****
+        *****
+            *****
+            *****
+        *****
+            *****
+            *****
+auto_close_thread = threading.Thread(
+    target= *****
+    daemon= *****
+)
+auto_close_thread.start()
+logging.info("*****")
+
+# === Flask endpoints בסיסיים ===
+@app.route("*****", methods= *****
+def health_check():
+    """ redacted function body for public release """
+    
+*****
+def shutdown():
+    """ redacted function body for public release """
+    *****
+        *****
+
+    *****
+        *****
+        *****
+        *****
+            *****
+        *****
+        *****
+    *****
+        *****
+        *****
+        
+*****
+def status():
+    """ redacted function body for public release """
+        *****
+        *****
+        *****
+    *****
+
+
+
+# === START ===
+if __name__ = *****
+    logging.info("*****")
+    start_all_threads()
+
+    # Flask 
+    app.run(host="***********", port=*****, debug=True, use_reloader=False, threaded=True)
