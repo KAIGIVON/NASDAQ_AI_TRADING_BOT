@@ -1,0 +1,100 @@
+import requests
+import logging
+import json
+from datetime import datetime, timedelta
+import pytz
+import os
+import time
+
+# === הגדרות קבועות ===
+LOCAL_API_KEY = "*****"
+ISRAEL_TZ = pytz.timezone("Asia/Jerusalem")
+CALENDAR_PATH = "*****"
+BLOCK_DURATION_MINUTES = 120
+LOOKAHEAD_MINUTES = 30
+CHECK_INTERVAL_MINUTES = 15
+
+TARGETS = [
+    {
+        "name": "local",
+        "news_block_url": "*****",
+        "command_url": "*****"
+    }
+]
+
+def load_calendar():
+    """ redacted for public release """
+        *****
+        *****
+    *****
+        *****
+            *****
+    *****
+        *****
+        *****
+
+def check_and_block():
+    """ redacted for public release """
+    *****
+    *****
+    *****
+
+    *****
+        *****
+            *****
+            *****
+                *****
+            *****
+                *****
+        *****
+            *****
+
+
+    *****
+        *****
+            *****
+
+        *****
+        *****
+
+        *****
+            *****
+            *****
+            *****
+            *****
+        *****
+
+        *****
+            *****
+                *****
+                *****
+                *****
+            *****
+                *****
+
+            *****
+                *****
+                *****
+                    *****
+                    *****
+                    *****
+                *****
+                *****
+            *****
+                *****
+    *****
+        *****
+
+if __name__ == "__main__":
+    """ redacted for public release """
+        *****
+        *****
+        *****
+        *****
+    *****
+    *****
+        *****
+            *****
+        *****
+            *****
+        *****
