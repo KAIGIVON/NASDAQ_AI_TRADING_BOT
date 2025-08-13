@@ -7,7 +7,7 @@ import os
 import time
 
 # === הגדרות קבועות ===
-LOCAL_API_KEY = "*****"
+API = "**********************"
 ISRAEL_TZ = pytz.timezone("Asia/Jerusalem")
 CALENDAR_PATH = "*****"
 BLOCK_DURATION_MINUTES = 120
