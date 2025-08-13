@@ -14,7 +14,6 @@ from pywinauto.application import Application
 from pywinauto import Desktop
 import pytz
 
-# === הגדרות קבועות ===
 API_KEY = *****
 SHUTDOWN_KEY = *****
 TRADING_HOURS = *****
@@ -25,7 +24,6 @@ israel_tz = *****
 app = *****
 pywinauto_lock = *****
 
-# === לוגים למסך + קובץ ===
 logging.basicConfig(
     level= *****
     format= *****
@@ -37,10 +35,9 @@ logging.basicConfig(
 
 logging.info("*****")
 
-# === משתנים כלליים ===
-failed_auth_attempts = *****
-AUTH_ATTEMPT_LIMIT = *****
-AUTH_ATTEMPT_WINDOW = *****
+failed_auth = *****
+AUTH_LIMIT = *****
+AUTH_WINDOW = *****
 trade_counter = *****
 last_trade_day = *****
 manual_news_block = *****
@@ -71,7 +68,6 @@ PROCESSES_TO_MONITOR = *****
 FLASK_HEALTH_URL = *****
 NGINX_URL = *****
 
-# === שליחת התראה לדיסקורד ===
 DISCORD_WEBHOOK_URL = *****
 last_alerts = *****
 monitor_last_alerts = *****
@@ -103,9 +99,8 @@ def log_trade_event(reason: str, pnl: float):
     *****
         *****
 
-# === בדיקות API וזמן מסחר ===
-def validate_api_key(json_data: dict) -> bool:
-    """ redacted function body for public release """
+def ******************************* -> bool:
+    """ redacted function body for GITHUB public release """
 
 def is_trading_blocked():
     """ redacted function body for public release """
@@ -113,7 +108,6 @@ def is_trading_blocked():
         *****
     *****
 
-# === שליחת פקודה ל־NinjaTrader ===
 def send_order_to_ninja(command: str, quantity: int = 1):
     """ redacted function body for public release """
         *****
@@ -558,8 +552,6 @@ def single_trade_loss_blocker_loop():
             
 
 
-# === חלק ד: System Monitor & Alerts ===
-
 def monitor_send_alert(message, tag):
     """ redacted function body for public release """
     *****
@@ -684,7 +676,6 @@ def check_latency():
             *****
 
 
-# === ניהול קירור התראות (מונע ספאם) ===
 last_alerts = *****
 def ping_host(hostname, tag, max_latency_ms=150):
     """ redacted function body for public release """
@@ -715,7 +706,6 @@ def ping_host(hostname, tag, max_latency_ms=150):
         *****
 
 
-# === חלק ה: main() — הרצת כל המודולים בלולאות נפרדות ===
 def start_all_threads():
     """ redacted function body for public release """
         *****
@@ -757,7 +747,6 @@ auto_close_thread = threading.Thread(
 auto_close_thread.start()
 logging.info("*****")
 
-# === Flask endpoints בסיסיים ===
 @app.route("*****", methods= *****
 def health_check():
     """ redacted function body for public release """
@@ -788,8 +777,6 @@ def status():
     *****
 
 
-
-# === START ===
 if __name__ = *****
     logging.info("*****")
     start_all_threads()
