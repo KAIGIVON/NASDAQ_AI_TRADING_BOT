@@ -1,0 +1,752 @@
+
+[
+    {
+        "datetime": "2025-06-17T06:30:00+03:00",
+        "title": "BOJ Policy Rate (Japan)"
+    },
+    {
+        "datetime": "2025-06-17T09:30:00+03:00",
+        "title": "BOJ Press Conference (Japan)"
+    },
+    {
+        "datetime": "2025-06-18T18:15:00+03:00",
+        "title": "BOC Gov Macklem Speaks (Canada)"
+    },
+    {
+        "datetime": "2025-06-19T11:00:00+03:00",
+        "title": "SNB Press Conference (Switzerland)"
+    },
+    {
+        "datetime": "2025-06-19T14:00:00+03:00",
+        "title": "Monetary Policy Summary (UK)"
+    },
+    {
+        "datetime": "2025-06-19T14:00:00+03:00",
+        "title": "MPC Official Bank Rate Votes (UK)"
+    },
+    {
+        "datetime": "2025-06-21T09:40:00+03:00",
+        "title": "BOJ Gov Ueda Speaks (Japan)"
+    },
+    {
+        "datetime": "2025-06-23T10:15:00+03:00",
+        "title": "French Flash Manufacturing PMI (France)"
+    },
+    {
+        "datetime": "2025-06-23T10:15:00+03:00",
+        "title": "French Flash Services PMI (France)"
+    },
+    {
+        "datetime": "2025-06-23T10:30:00+03:00",
+        "title": "German Flash Manufacturing PMI (Germany)"
+    },
+    {
+        "datetime": "2025-06-23T10:30:00+03:00",
+        "title": "German Flash Services PMI (Germany)"
+    },
+    {
+        "datetime": "2025-06-23T11:30:00+03:00",
+        "title": "Flash Manufacturing PMI (UK)"
+    },
+    {
+        "datetime": "2025-06-23T11:30:00+03:00",
+        "title": "Flash Services PMI (UK)"
+    },
+    {
+        "datetime": "2025-06-23T16:45:00+03:00",
+        "title": "Flash Manufacturing PMI (USA)"
+    },
+    {
+        "datetime": "2025-06-23T16:45:00+03:00",
+        "title": "Flash Services PMI (USA)"
+    },
+    {
+        "datetime": "2025-06-24T17:00:00+03:00",
+        "title": "BOE Gov Bailey Speaks (UK)"
+    },
+    {
+        "datetime": "2025-06-26T14:00:00+03:00",
+        "title": "BOE Gov Bailey Speaks (UK)"
+    },
+    {
+        "datetime": "2025-06-30T04:30:00+03:00",
+        "title": "Manufacturing PMI (China)"
+    },
+    {
+        "datetime": "2025-06-30T09:29:00+03:00",
+        "title": "German Prelim CPI m/m (Germany)"
+    },
+    {
+        "datetime": "2025-07-01T17:00:00+03:00",
+        "title": "ISM Manufacturing PMI (USA)"
+    },
+    {
+        "datetime": "2025-07-02T14:40:00+03:00",
+        "title": "JOLTS Job Openings (USA)"
+    },
+    {
+        "datetime": "2025-07-02T15:15:00+03:00",
+        "title": "ADP Non-Farm Employment Change (USA)"
+    },
+    {
+        "datetime": "2025-07-03T09:30:00+03:00",
+        "title": "CPI m/m (Switzerland)"
+    },
+    {
+        "datetime": "2025-07-03T17:00:00+03:00",
+        "title": "ISM Services PMI (USA)"
+    },
+    {
+        "datetime": "2025-07-08T07:30:00+03:00",
+        "title": "Cash Rate (Australia)"
+    },
+    {
+        "datetime": "2025-07-08T07:30:00+03:00",
+        "title": "RBA Rate Statement (Australia)"
+    },
+    {
+        "datetime": "2025-07-09T05:00:00+03:00",
+        "title": "Official Cash Rate (New Zealand)"
+    },
+    {
+        "datetime": "2025-07-09T05:00:00+03:00",
+        "title": "RBNZ Rate Statement (New Zealand)"
+    },
+    {
+        "datetime": "2025-07-10T15:30:00+03:00",
+        "title": "Unemployment Claims (USA)"
+    },
+    {
+        "datetime": "2025-07-12T00:00:00+03:00",
+        "title": "Upper House Elections (Japan)"
+    },
+    {
+        "datetime": "2025-07-14T15:30:00+03:00",
+        "title": "CPI m/m (Canada)"
+    },
+    {
+        "datetime": "2025-07-14T15:30:00+03:00",
+        "title": "Median CPI y/y (Canada)"
+    },
+    {
+        "datetime": "2025-07-14T15:30:00+03:00",
+        "title": "Trimmed CPI y/y (Canada)"
+    },
+    {
+        "datetime": "2025-07-16T09:00:00+03:00",
+        "title": "CPI y/y (UK)"
+    },
+    {
+        "title": "Test title - GDP Data",
+        "datetime": "2025-07-16T23:55:00+03:00",
+        "importance": "high"
+    },
+    {
+        "datetime": "2025-07-17T04:30:00+03:00",
+        "title": "Employment Change (Australia)"
+    },
+    {
+        "datetime": "2025-07-17T04:30:00+03:00",
+        "title": "Unemployment Rate (Australia)"
+    },
+    {
+        "datetime": "2025-07-17T15:30:00+03:00",
+        "title": "Core Retail Sales m/m (USA)"
+    },
+    {
+        "datetime": "2025-07-17T15:30:00+03:00",
+        "title": "Retail Sales m/m (USA)"
+    },
+    {
+        "datetime": "2025-07-17T15:30:00+03:00",
+        "title": "Unemployment Claims (USA)"
+    },
+    {
+        "datetime": "2025-07-20T00:00:00+03:00",
+        "title": "Upper House Elections (Japan)"
+    },
+    {
+        "datetime": "2025-07-21T01:45:00+03:00",
+        "title": "CPI q/q (New Zealand)"
+    },
+    {
+        "datetime": "2025-07-24T10:15:00+03:00",
+        "title": "French Flash Manufacturing PMI (France)"
+    },
+    {
+        "datetime": "2025-07-24T10:15:00+03:00",
+        "title": "French Flash Services PMI (France)"
+    },
+    {
+        "datetime": "2025-07-24T10:30:00+03:00",
+        "title": "German Flash Manufacturing PMI (Germany)"
+    },
+    {
+        "datetime": "2025-07-24T10:30:00+03:00",
+        "title": "German Flash Services PMI (Germany)"
+    },
+    {
+        "datetime": "2025-07-24T11:30:00+03:00",
+        "title": "Flash Manufacturing PMI (UK)"
+    },
+    {
+        "datetime": "2025-07-24T11:30:00+03:00",
+        "title": "Flash Services PMI (UK)"
+    },
+    {
+        "datetime": "2025-07-24T15:15:00+03:00",
+        "title": "Main Refinancing Rate (EU)"
+    },
+    {
+        "datetime": "2025-07-24T15:15:00+03:00",
+        "title": "Monetary Policy Statement (EU)"
+    },
+    {
+        "datetime": "2025-07-24T15:30:00+03:00",
+        "title": "Unemployment Claims (USA)"
+    },
+    {
+        "datetime": "2025-07-24T15:45:00+03:00",
+        "title": "ECB Press Conference (EU)"
+    },
+    {
+        "datetime": "2025-07-24T16:45:00+03:00",
+        "title": "Flash Manufacturing PMI (USA)"
+    },
+    {
+        "datetime": "2025-07-24T16:45:00+03:00",
+        "title": "Flash Services PMI (USA)"
+    },
+    {
+        "datetime": "2025-07-25T09:00:00+03:00",
+        "title": "Retail Sales m/m (UK)"
+    },
+    {
+        "datetime": "2025-07-25T09:00:00+03:00",
+        "title": "GBP Retail Sales m/m"
+    },
+    {
+        "datetime": "2025-07-29T17:00:00+03:00",
+        "title": "USD JOLTS Job Openings"
+    },
+    {
+        "datetime": "2025-07-30T04:30:00+03:00",
+        "title": "AUD CPI q/q"
+    },
+    {
+        "datetime": "2025-07-30T04:30:00+03:00",
+        "title": "AUD CPI y/y"
+    },
+    {
+        "datetime": "2025-07-30T04:30:00+03:00",
+        "title": "AUD Trimmed Mean CPI q/q"
+    },
+    {
+        "datetime": "2025-07-30T15:15:00+03:00",
+        "title": "USD ADP Non-Farm Employment Change"
+    },
+    {
+        "datetime": "2025-07-30T15:30:00+03:00",
+        "title": "USD Advance GDP q/q"
+    },
+    {
+        "datetime": "2025-07-30T16:45:00+03:00",
+        "title": "CAD BOC Monetary Policy Report"
+    },
+    {
+        "datetime": "2025-07-30T16:45:00+03:00",
+        "title": "CAD BOC Rate Statement"
+    },
+    {
+        "datetime": "2025-07-30T16:45:00+03:00",
+        "title": "CAD Overnight Rate"
+    },
+    {
+        "datetime": "2025-07-30T17:30:00+03:00",
+        "title": "CAD BOC Press Conference"
+    },
+    {
+        "datetime": "2025-07-30T21:00:00+03:00",
+        "title": "USD Federal Funds Rate"
+    },
+    {
+        "datetime": "2025-07-30T21:00:00+03:00",
+        "title": "USD FOMC Statement"
+    },
+    {
+        "datetime": "2025-07-30T21:30:00+03:00",
+        "title": "USD FOMC Press Conference"
+    },
+    {
+        "datetime": "2025-07-31T04:30:00+03:00",
+        "title": "CNY Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-07-31T15:30:00+03:00",
+        "title": "CAD GDP m/m"
+    },
+    {
+        "datetime": "2025-07-31T15:30:00+03:00",
+        "title": "USD Core PCE Price Index m/m"
+    },
+    {
+        "datetime": "2025-07-31T15:30:00+03:00",
+        "title": "USD Employment Cost Index q/q"
+    },
+    {
+        "datetime": "2025-07-31T15:30:00+03:00",
+        "title": "USD Unemployment Claims"
+    },
+    {
+        "datetime": "2025-08-01T15:30:00+03:00",
+        "title": "USD Average Hourly Earnings m/m"
+    },
+    {
+        "datetime": "2025-08-01T15:30:00+03:00",
+        "title": "USD Non-Farm Employment Change"
+    },
+    {
+        "datetime": "2025-08-01T15:30:00+03:00",
+        "title": "USD Unemployment Rate"
+    },
+    {
+        "datetime": "2025-08-01T17:00:00+03:00",
+        "title": "USD ISM Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-08-04T09:30:00+03:00",
+        "title": "CHF CPI m/m"
+    },
+    {
+        "datetime": "2025-08-05T17:00:00+03:00",
+        "title": "USD ISM Services PMI"
+    },
+    {
+        "datetime": "2025-08-06T01:45:00+03:00",
+        "title": "NZD Employment Change q/q"
+    },
+    {
+        "datetime": "2025-08-06T01:45:00+03:00",
+        "title": "NZD Unemployment Rate"
+    },
+    {
+        "datetime": "2025-08-07T14:00:00+03:00",
+        "title": "GBP BOE Monetary Policy Report"
+    },
+    {
+        "datetime": "2025-08-07T14:00:00+03:00",
+        "title": "GBP Monetary Policy Summary"
+    },
+    {
+        "datetime": "2025-08-07T14:00:00+03:00",
+        "title": "GBP MPC Official Bank Rate Votes"
+    },
+    {
+        "datetime": "2025-08-07T14:00:00+03:00",
+        "title": "GBP Official Bank Rate"
+    },
+    {
+        "datetime": "2025-08-07T15:30:00+03:00",
+        "title": "USD Unemployment Claims"
+    },
+    {
+        "datetime": "2025-07-25T09:00:00+03:00",
+        "title": "Retail Sales m/m (UK)"
+    },
+    {
+        "datetime": "2025-07-29T17:00:00+03:00",
+        "title": "JOLTS Job Openings (USA)"
+    },
+    {
+        "datetime": "2025-07-30T04:30:00+03:00",
+        "title": "CPI q/q (Australia)"
+    },
+    {
+        "datetime": "2025-07-30T04:30:00+03:00",
+        "title": "CPI y/y (Australia)"
+    },
+    {
+        "datetime": "2025-07-30T04:30:00+03:00",
+        "title": "Trimmed Mean CPI q/q (Australia)"
+    },
+    {
+        "datetime": "2025-07-30T15:15:00+03:00",
+        "title": "ADP Non-Farm Employment Change (USA)"
+    },
+    {
+        "datetime": "2025-07-30T15:30:00+03:00",
+        "title": "Advance GDP q/q (USA)"
+    },
+    {
+        "datetime": "2025-07-30T16:45:00+03:00",
+        "title": "BOC Monetary Policy Report (Canada)"
+    },
+    {
+        "datetime": "2025-07-30T16:45:00+03:00",
+        "title": "BOC Rate Statement (Canada)"
+    },
+    {
+        "datetime": "2025-07-30T16:45:00+03:00",
+        "title": "Overnight Rate (Canada)"
+    },
+    {
+        "datetime": "2025-07-30T17:30:00+03:00",
+        "title": "BOC Press Conference (Canada)"
+    },
+    {
+        "datetime": "2025-07-30T21:00:00+03:00",
+        "title": "Federal Funds Rate (USA)"
+    },
+    {
+        "datetime": "2025-07-30T21:00:00+03:00",
+        "title": "FOMC Statement (USA)"
+    },
+    {
+        "datetime": "2025-07-30T21:30:00+03:00",
+        "title": "FOMC Press Conference (USA)"
+    },
+    {
+        "datetime": "2025-08-01T15:30:00",
+        "title": "Average Hourly Earnings m/m"
+    },
+    {
+        "datetime": "2025-08-01T15:30:00",
+        "title": "Non-Farm Employment Change"
+    },
+    {
+        "datetime": "2025-08-01T15:30:00",
+        "title": "Unemployment Rate"
+    },
+    {
+        "datetime": "2025-08-01T17:00:00",
+        "title": "ISM Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-08-04T09:30:00",
+        "title": "CPI m/m"
+    },
+    {
+        "datetime": "2025-08-05T17:00:00",
+        "title": "ISM Services PMI"
+    },
+    {
+        "datetime": "2025-08-07T14:00:00",
+        "title": "BOE Monetary Policy Report"
+    },
+    {
+        "datetime": "2025-08-07T14:00:00",
+        "title": "Monetary Policy Summary"
+    },
+    {
+        "datetime": "2025-08-07T14:00:00",
+        "title": "MPC Official Bank Rate Votes"
+    },
+    {
+        "datetime": "2025-08-07T14:00:00",
+        "title": "Official Bank Rate"
+    },
+    {
+        "datetime": "2025-08-07T15:30:00",
+        "title": "Unemployment Claims"
+    },
+    {
+        "datetime": "2025-08-12T15:30:00",
+        "title": "Core CPI m/m"
+    },
+    {
+        "datetime": "2025-08-12T15:30:00",
+        "title": "CPI m/m"
+    },
+    {
+        "datetime": "2025-08-12T15:30:00",
+        "title": "CPI y/y"
+    },
+    {
+        "datetime": "2025-08-14T09:00:00",
+        "title": "GDP m/m"
+    },
+    {
+        "datetime": "2025-08-14T15:30:00",
+        "title": "Core PPI m/m"
+    },
+    {
+        "datetime": "2025-08-14T15:30:00",
+        "title": "PPI m/m"
+    },
+    {
+        "datetime": "2025-08-14T15:30:00",
+        "title": "Unemployment Claims"
+    },
+    {
+        "datetime": "2025-08-15T15:30:00",
+        "title": "Core Retail Sales m/m"
+    },
+    {
+        "datetime": "2025-08-15T15:30:00",
+        "title": "Retail Sales m/m"
+    },
+    {
+        "datetime": "2025-08-15T17:00:00",
+        "title": "Prelim UoM Consumer Sentiment"
+    },
+    {
+        "datetime": "2025-08-15T17:00:00",
+        "title": "Prelim UoM Inflation Expectations"
+    },
+    {
+        "datetime": "2025-08-20T09:00:00",
+        "title": "CPI y/y"
+    },
+    {
+        "datetime": "2025-08-20T21:00:00",
+        "title": "FOMC Meeting Minutes"
+    },
+    {
+        "datetime": "2025-08-21T10:15:00",
+        "title": "French Flash Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-08-21T10:15:00",
+        "title": "French Flash Services PMI"
+    },
+    {
+        "datetime": "2025-08-21T10:30:00",
+        "title": "German Flash Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-08-21T10:30:00",
+        "title": "German Flash Services PMI"
+    },
+    {
+        "datetime": "2025-08-21T11:30:00",
+        "title": "Flash Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-08-21T11:30:00",
+        "title": "Flash Services PMI"
+    },
+    {
+        "datetime": "2025-08-21T15:30:00",
+        "title": "Unemployment Claims"
+    },
+    {
+        "datetime": "2025-08-21T16:45:00",
+        "title": "Flash Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-08-21T16:45:00",
+        "title": "Flash Services PMI"
+    },
+    {
+        "datetime": "2025-08-28T15:30:00",
+        "title": "Prelim GDP q/q"
+    },
+    {
+        "datetime": "2025-08-28T15:30:00",
+        "title": "Unemployment Claims"
+    },
+    {
+        "datetime": "2025-08-29T15:30:00",
+        "title": "Core PCE Price Index m/m"
+    },
+    {
+        "datetime": "2025-09-02T17:00:00",
+        "title": "ISM Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-09-03T17:00:00",
+        "title": "JOLTS Job Openings"
+    },
+    {
+        "datetime": "2025-09-04T09:30:00",
+        "title": "CPI m/m"
+    },
+    {
+        "datetime": "2025-09-04T15:15:00",
+        "title": "ADP Non-Farm Employment Change"
+    },
+    {
+        "datetime": "2025-09-04T15:30:00",
+        "title": "Unemployment Claims"
+    },
+    {
+        "datetime": "2025-09-04T17:00:00",
+        "title": "ISM Services PMI"
+    },
+    {
+        "datetime": "2025-09-05T15:30:00",
+        "title": "Average Hourly Earnings m/m"
+    },
+    {
+        "datetime": "2025-09-05T15:30:00",
+        "title": "Non-Farm Employment Change"
+    },
+    {
+        "datetime": "2025-09-05T15:30:00",
+        "title": "Unemployment Rate"
+    },
+    {
+        "datetime": "2025-09-10T15:30:00",
+        "title": "Core PPI m/m"
+    },
+    {
+        "datetime": "2025-09-10T15:30:00",
+        "title": "PPI m/m"
+    },
+    {
+        "datetime": "2025-09-11T15:15:00",
+        "title": "Main Refinancing Rate"
+    },
+    {
+        "datetime": "2025-09-11T15:15:00",
+        "title": "Monetary Policy Statement"
+    },
+    {
+        "datetime": "2025-09-11T15:30:00",
+        "title": "Core CPI m/m"
+    },
+    {
+        "datetime": "2025-09-11T15:30:00",
+        "title": "CPI m/m"
+    },
+    {
+        "datetime": "2025-09-11T15:30:00",
+        "title": "CPI y/y"
+    },
+    {
+        "datetime": "2025-09-11T15:30:00",
+        "title": "Unemployment Claims"
+    },
+    {
+        "datetime": "2025-09-11T15:45:00",
+        "title": "ECB Press Conference"
+    },
+    {
+        "datetime": "2025-09-12T09:00:00",
+        "title": "GDP m/m"
+    },
+    {
+        "datetime": "2025-09-12T17:00:00",
+        "title": "Prelim UoM Consumer Sentiment"
+    },
+    {
+        "datetime": "2025-09-12T17:00:00",
+        "title": "Prelim UoM Inflation Expectations"
+    },
+    {
+        "datetime": "2025-09-16T15:30:00",
+        "title": "Core Retail Sales m/m"
+    },
+    {
+        "datetime": "2025-09-16T15:30:00",
+        "title": "Retail Sales m/m"
+    },
+    {
+        "datetime": "2025-09-17T09:00:00",
+        "title": "CPI y/y"
+    },
+    {
+        "datetime": "2025-09-17T21:00:00",
+        "title": "Federal Funds Rate"
+    },
+    {
+        "datetime": "2025-09-17T21:00:00",
+        "title": "FOMC Economic Projections"
+    },
+    {
+        "datetime": "2025-09-17T21:00:00",
+        "title": "FOMC Statement"
+    },
+    {
+        "datetime": "2025-09-17T21:30:00",
+        "title": "FOMC Press Conference"
+    },
+    {
+        "datetime": "2025-09-18T14:00:00",
+        "title": "Monetary Policy Summary"
+    },
+    {
+        "datetime": "2025-09-18T14:00:00",
+        "title": "MPC Official Bank Rate Votes"
+    },
+    {
+        "datetime": "2025-09-18T14:00:00",
+        "title": "Official Bank Rate"
+    },
+    {
+        "datetime": "2025-09-18T15:30:00",
+        "title": "Unemployment Claims"
+    },
+    {
+        "datetime": "2025-09-19T00:00:00",
+        "title": "BOJ Policy Rate"
+    },
+    {
+        "datetime": "2025-09-19T00:00:00",
+        "title": "Monetary Policy Statement"
+    },
+    {
+        "datetime": "2025-09-19T00:00:00",
+        "title": "BOJ Press Conference"
+    },
+    {
+        "datetime": "2025-09-23T10:15:00",
+        "title": "French Flash Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-09-23T10:15:00",
+        "title": "French Flash Services PMI"
+    },
+    {
+        "datetime": "2025-09-23T10:30:00",
+        "title": "German Flash Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-09-23T10:30:00",
+        "title": "German Flash Services PMI"
+    },
+    {
+        "datetime": "2025-09-23T11:30:00",
+        "title": "Flash Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-09-23T11:30:00",
+        "title": "Flash Services PMI"
+    },
+    {
+        "datetime": "2025-09-23T16:45:00",
+        "title": "Flash Manufacturing PMI"
+    },
+    {
+        "datetime": "2025-09-23T16:45:00",
+        "title": "Flash Services PMI"
+    },
+    {
+        "datetime": "2025-09-25T10:30:00",
+        "title": "SNB Monetary Policy Assessment"
+    },
+    {
+        "datetime": "2025-09-25T10:30:00",
+        "title": "SNB Policy Rate"
+    },
+    {
+        "datetime": "2025-09-25T11:00:00",
+        "title": "SNB Press Conference"
+    },
+    {
+        "datetime": "2025-09-25T15:30:00",
+        "title": "Final GDP q/q"
+    },
+    {
+        "datetime": "2025-09-25T15:30:00",
+        "title": "Unemployment Claims"
+    },
+    {
+        "datetime": "2025-09-26T15:30:00",
+        "title": "Core PCE Price Index m/m"
+    },
+    {
+        "datetime": "2025-09-30T17:00:00",
+        "title": "JOLTS Job Openings"
+    }
+]
