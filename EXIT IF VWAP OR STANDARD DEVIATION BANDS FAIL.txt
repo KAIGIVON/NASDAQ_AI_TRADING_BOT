@@ -1,0 +1,64 @@
+//@version=5
+indicator("סגירת עסקה – כשל פריצה על VWAP ועל STDEV1 העליונה בלבד", overlay=true)
+
+// ===== קלטים =====
+devUp1 = input(1.33, title="סטיית תקן עליונה 1")
+devUp2 = input(1.96, title="סטיית תקן עליונה 2")
+devUp3 = input(2.61, title="סטיית תקן עליונה 3")
+
+// ===== חישוב VWAP וסטיית תקן =====
+newSession = ta.change(time("D"))
+vwapsum   = 0.0
+volumesum = 0.0
+v2sum     = 0.0
+
+vwapsum   := newSession ? hl2 * volume : nz(vwapsum[1]) + hl2 * volume
+volumesum := newSession ? volume       : nz(volumesum[1]) + volume
+v2sum     := newSession ? volume * hl2 * hl2 : nz(v2sum[1]) + volume * hl2 * hl2
+
+vwap  = vwapsum / volumesum
+stdev = math.sqrt(math.max(v2sum / volumesum - vwap * vwap, 0))
+
+// ===== רמות עליונות בלבד =====
+vwapu0 = vwap
+vwapu1 = vwap + stdev * devUp1
+vwapu2 = vwap + stdev * devUp2
+vwapu3 = vwap + stdev * devUp3
+
+// ===== דגלי פריצה =====
+var bool wentAboveVWAP   = false
+var bool wentAboveSTDEV1 = false
+
+if newSession
+    wentAboveVWAP   := false
+    wentAboveSTDEV1 := false
+
+// אם עלינו מעל VWAP / מעל VWAP+STDEV1 במהלך היום (כולל גאפ פתיחה)
+if close > vwap
+    wentAboveVWAP := true
+if close > vwapu1
+    wentAboveSTDEV1 := true
+
+// ===== תנאי יציאה =====
+exitVWAP   = wentAboveVWAP   and ta.crossunder(close, vwap)
+// כשל פריצה רק על הסטייה העליונה (אין שימוש בתחתונה)
+exitSTDEV1 = wentAboveSTDEV1 and ta.crossunder(close, vwapu1)
+
+// אפשר להשאיר OR אם אתה רוצה לצאת על כל אחד מהם:
+exit100 = exitVWAP or exitSTDEV1
+
+// ===== ציור =====
+plot(vwapu0, title="VWAP",        color=color.rgb(255,255,255,100))
+plot(vwapu1, title="VWAP+STDEV1", color=color.rgb(255,254,254,100))
+plot(vwapu2, title="VWAP+STDEV2", color=color.rgb(255,255,255,100))
+plot(vwapu3, title="VWAP+STDEV3", color=color.rgb(255,255,255,100))
+
+// ===== התראות =====
+alertcondition(exitVWAP,   title="ירידה חוזרת מתחת ל-VWAP",       message="🚨 יציאה 100% – כשל על VWAP")
+alertcondition(exitSTDEV1, title="ירידה מתחת ל-VWAP+STDEV1",      message="🚨 יציאה 100% – כשל על STDEV1 העליונה")
+alertcondition(exit100,    title="Exit ANY (VWAP or STDEV1 upper)", message="🚨 יציאה 100% – כשל על VWAP או STDEV1 העליונה")
+
+// ===== סימון =====
+plotshape(exitVWAP,   title="Exit on VWAP Fail",   location=location.belowbar, color=color.red,    style=shape.labelup, text=" יציאה VWAP ")
+plotshape(exitSTDEV1, title="Exit on STDEV1 Fail", location=location.belowbar, color=color.orange, style=shape.labelup, text=" יציאה STDEV1 ")
+plotshape(exit100,    title="Exit ANY",            location=location.belowbar, color=color.fuchsia, style=shape.triangledown, text=" 100% Exit ")
