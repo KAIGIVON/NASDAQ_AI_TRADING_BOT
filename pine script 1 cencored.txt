@@ -1,0 +1,175 @@
+//@version=5
+indicator("ALGOSPARK AI NASDAQ KING 4.0 - BOT SUPERFiltered Edition AVERAGE", overlay=true, max_labels_count=500)
+
+// ========== VWAP FILTER (MANUAL SESSION-BASED CALCULATION) ==========
+newSession = ******************
+vwapsum = ***
+volumesum = ***
+v2sum = ***
+
+vwapsum := **********************************************************
+volumesum := ********************************************************
+v2sum := *******************************************************************
+
+vwap = *******************
+stdev = ********************************************************
+vwap_lower = ********************
+
+// ========== SETTINGS ==========
+length = input(*****************, 'ATR Length')
+minMult = input.int(*****************, '************', minval = 0, inline = 'factor')
+maxMult = input.int(*****************, '', ***** = 0, inline = '*********')
+step = input.float(*****************, 'Step', ****** = 0, step = 0.1)
+perfAlpha = input.float(*****************, 'Performance Memory', ******** = 2)
+fromCluster = input.string(*****************, 'From Cluster', options = ['Best', 'Average', 'Worst'])
+maxIter = input.int(*****************, 'Maximum Iteration Steps', minval = 0, group = 'Optimization')
+maxData = input.int(*****************, 'Historical Bars Calculation', minval = 0, group = 'Optimization')
+
+bearCss = input(color.new(*****************), 'Trailing Stop', inline = 'ts', group = 'Style')
+bullCss = input(color.rgb(*****************), '', inline = 'ts', group = 'Style')
+amaBearCss = input(color.new(*****************), 'AMA', inline = 'ama', group = 'Style')
+amaBullCss = input(color.new(*****************), '', inline = 'ama', group = 'Style')
+showGradient = input(*****************, 'Candle Coloring', group = 'Style')
+showSignals = input(*****************, 'Show Signals', group = 'Style')
+
+// ========== TYPES ==========
+type supertrend
+    float upper = *****************
+    float lower = *****************
+    float output
+    float perf = 0
+    float factor
+    int trend = 0
+
+type vector
+    array<float> out
+
+// ========== SUPERTREND ENGINE ==========
+var holder = ***********<*********>(0)
+var factors = **********<float>(0)
+if barstate.isfirst
+    for i = 0 to int((***************** - *****************) / *****************)
+        factors.push(*****************)
+        **********.push(***********.new())
+
+atr = ta.***(*****************)
+k = 0
+for factor in factors
+    ******* = *********(k)
+    up = *****************
+    dn = *****************
+    *******.trend := *****************
+    *******.upper := *****************
+    *******.lower := *****************
+    diff = *****************
+    *******.perf += *****************
+    *******.output := *****************
+    *******.factor := *****************
+    k += 1
+
+// ========== CLUSTERING ==========
+factor_array = ******.new<*****>(0)
+data = array.***<float>(0)
+if *************- bar_index <= *****************
+    for element in holder
+        data.****(*****************)
+        ******_array.push(*****************)
+
+centroids = array.new<*****>(0)
+centroids.push(*****************)
+centroids.push(*****************)
+centroids.push(*****************)
+
+var array<vector> factors_clusters = *****
+var array<vector> perfclusters = *******
+if last_bar_index - bar_index <= *****************
+    for _ = 0 to *****************
+        factors_clusters := array.from(*****************)
+        perfclusters := array.from(*****************)
+        i = 0
+        for ***** in data
+            dist = array.new<float>(0)
+            for ******* in centroids
+                dist.push(*****************)
+            idx = *****************
+            ***********.get(idx).out.push(*****************)
+            factors_clusters.get(idx).out.push(*****************)
+            i += 1
+        new_********* = array.*****<******>(0)
+        for cluster_ in perfclusters
+            new_*******.push(*****************)
+        if *****************
+            break
+        centroids := new_centroids
+
+// ========== SIGNALS & AMA ==========
+var float target_factor = na
+var float perf_idx = na
+var float perf_ama = na
+
+var from = switch fromCluster
+    'Best' => *****************
+    'Average' => *****************
+    'Worst' => *****************
+
+den = ta.ema(*****************, int(perfAlpha))
+if not na(perfclusters)
+    target_factor := *****************
+    perf_idx := *****************
+
+var upper = *****************
+var lower = *****************
+var os = 0
+up = *****************
+dn = *****************
+upper := *****************
+lower := *****************
+os := *****************
+
+// Trailing stop
+var float ts = na
+ts := *****************
+if na(ts[1]) and not na(ts)
+    perf_ama := *****************
+else
+    perf_ama += *****************
+
+// ========== VWAP STDEV BANDS ==========
+devUp1 = input(*****************, title="Stdev above (1)")
+devDn1 = input(*****************, title="Stdev below (1)")
+devUp2 = input(*****************, title="Stdev above (2)")
+devDn2 = input(*****************, title="Stdev below (2)")
+devUp3 = input(*****************, title="Stdev above (3)")
+devDn3 = input(*****************, title="Stdev below (3)")
+devUp4 = input(*****************, title="Stdev above (4)")
+devDn4 = input(*****************, title="Stdev below (4)")
+devUp5 = input(*****************, title="Stdev above (5)")
+devDn5 = input(*****************, title="Stdev below (5)")
+showDv2 = input(*****************, title="Show second group of bands?")
+showDv3 = input(*****************, title="Show third group of bands?")
+showDv4 = input(*****************, title="Show fourth group of bands?")
+showDv5 = input(*****************, title="Show fifth group of bands?")
+
+plot(*****************)
+plot(*****************)
+plot(*****************)
+plot(*****************)
+plot(*****************)
+plot(*****************)
+plot(*****************)
+plot(*****************)
+plot(*****************)
+plot(*****************)
+
+// ========== TRAILING STOPS ==========
+*** = *****************
+**** (*****************)
+**** (*****************)
+
+// ========== FILTERED SIGNAL ==========
+longSignal = *****************
+
+if showSignals and longSignal
+    label.new(*****************)
+
+alertcondition(*****************)
